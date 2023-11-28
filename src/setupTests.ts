@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
+import "./server/index.js";
 import { MongoMemoryServer } from "mongodb-memory-server";
-import { connectToDatabase } from "./database";
+import { connectToDatabase } from "./database/index.js";
 
 let server: MongoMemoryServer;
 
