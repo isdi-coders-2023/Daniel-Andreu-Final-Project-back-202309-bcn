@@ -3,7 +3,7 @@ import app from "../app";
 
 describe("Given a GET /fasdf endpoint", () => {
   describe("When it receives a request", () => {
-    test("Then it should response with a 404 'Endoint not found' error", async () => {
+    test("Then it should response with a 404 'Endpoint not found' error", async () => {
       const path = "/fasdf";
       const expectedStatusCode = 404;
       const expectedErrorMessage = "Endpoint not found";

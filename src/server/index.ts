@@ -7,6 +7,10 @@ import {
   generalError,
   notFound,
 } from "./middlewares/errors/errorsMiddleware.js";
+import pingRouter from "../features/ping/router/pingRouter.js";
+
+const port = process.env.PORT ?? 4000;
+const frontUrl = process.env.FRONT_URL!;
 
 app.use(morgan("dev"));
 
@@ -14,12 +18,11 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: [
-      "https://daniel-andreu-202309-bcn-front.netlify.app/",
-      "http://localhost:4000",
-    ],
+    origin: [frontUrl, `http://localhost:${port}`],
   }),
 );
+
+app.use("/", pingRouter);
 
 app.use(notFound);
 
