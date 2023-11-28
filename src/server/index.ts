@@ -7,6 +7,7 @@ import {
   generalError,
   notFound,
 } from "./middlewares/errors/errorsMiddleware.js";
+import pingRouter from "../features/ping/router/pingRouter.js";
 
 const port = process.env.PORT ?? 4000;
 const frontUrl = process.env.FRONT_URL!;
@@ -20,6 +21,8 @@ app.use(
     origin: [frontUrl, `http://localhost:${port}`],
   }),
 );
+
+app.use("/", pingRouter);
 
 app.use(notFound);
 
