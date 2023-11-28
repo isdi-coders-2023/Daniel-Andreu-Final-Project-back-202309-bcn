@@ -3,6 +3,10 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import app from "./app.js";
+import {
+  generalError,
+  notFound,
+} from "./middlewares/errors/errorsMiddleware.js";
 
 app.use(morgan("dev"));
 
@@ -16,3 +20,7 @@ app.use(
     ],
   }),
 );
+
+app.use(notFound);
+
+app.use(generalError);
