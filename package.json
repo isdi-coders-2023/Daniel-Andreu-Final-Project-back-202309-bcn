@@ -15,6 +15,9 @@
     "prepare": "husky install"
   },
   "keywords": [],
+  "engines": {
+    "node": ">=20.6.1"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
