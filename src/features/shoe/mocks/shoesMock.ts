@@ -32,3 +32,5 @@ const shoesMock: ShoeDataStructure[] = [
     location: "El Vendrell",
   },
 ];
+
+export default shoesMock;
