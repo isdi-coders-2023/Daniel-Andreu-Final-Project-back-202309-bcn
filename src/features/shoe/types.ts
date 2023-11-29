@@ -16,3 +16,7 @@ export interface ShoeDataStructure {
 export interface ShoeStructure extends ShoeDataStructure {
   _id: string;
 }
+
+export interface ShoesRepositoryStructure {
+  getShoes: () => Promise<ShoeStructure[]>;
+}
