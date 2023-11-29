@@ -1,4 +1,4 @@
-import Shoe from "../model/Shoe";
+import Shoe from "../model/Shoe.js";
 import type { ShoeStructure, ShoesRepositoryStructure } from "../types";
 
 class ShoesMongooseRepository implements ShoesRepositoryStructure {
