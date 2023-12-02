@@ -10,7 +10,6 @@ import {
 import pingRouter from "../features/ping/router/pingRouter.js";
 import shoesRouter from "../features/shoe/router/shoesRouter.js";
 
-const port = process.env.PORT ?? 4000;
 const frontUrl = process.env.FRONT_URL!;
 
 app.use(morgan("dev"));
@@ -19,7 +18,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: [frontUrl, `http://localhost:${port}`],
+    origin: [frontUrl, "http://localhost:5173", "http://localhost:4000"],
   }),
 );
 
