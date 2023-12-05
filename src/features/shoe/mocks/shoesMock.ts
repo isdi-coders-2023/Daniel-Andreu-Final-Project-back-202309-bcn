@@ -1,7 +1,8 @@
-import type { ShoeDataStructure } from "../types";
+import type { ShoeStructure } from "../types";
 
-const shoesMock: ShoeDataStructure[] = [
+const shoesMock: ShoeStructure[] = [
   {
+    _id: "93661f02b15321760f51c6",
     title: "Nike Blazer Blancas",
     image: "https://i.ibb.co/bW5YQZ3/1.webp",
     price: 70,
@@ -17,6 +18,7 @@ const shoesMock: ShoeDataStructure[] = [
     location: "Cornella de Llobregat",
   },
   {
+    _id: "83661f02b19321760f51c7",
     title: "Air Jordan Retro 1",
     image: "https://i.ibb.co/2crCbW0/2.webp",
     price: 65,

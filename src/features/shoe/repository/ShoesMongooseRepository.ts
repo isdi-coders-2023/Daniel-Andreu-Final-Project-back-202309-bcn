@@ -8,5 +8,13 @@ class ShoesMongooseRepository implements ShoesRepositoryStructure {
 
     return shoes;
   }
+
+  public async deleteShoe(shoeId: string): Promise<void> {
+    try {
+      await Shoe.findByIdAndDelete(shoeId);
+    } catch (error) {
+      throw new Error("Error deleting the shoe" + (error as Error).message);
+    }
+  }
 }
 export default ShoesMongooseRepository;

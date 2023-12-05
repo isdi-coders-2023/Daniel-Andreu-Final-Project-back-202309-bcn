@@ -12,7 +12,9 @@ describe("Given a ShoesController's getShoes method", () => {
   const shoesRepository: Pick<ShoesRepositoryStructure, "getShoes"> = {
     getShoes: jest.fn().mockResolvedValue(shoesMock),
   };
-  const shoesController = new ShoesController(shoesRepository);
+  const shoesController = new ShoesController(
+    shoesRepository as ShoesRepositoryStructure,
+  );
 
   describe("When it receives a response", () => {
     const req = {};
