@@ -1,5 +1,5 @@
 import Shoe from "../model/Shoe.js";
-import type { ShoeStructure } from "../types";
+import type { ShoeStructure } from "../types.js";
 import type { ShoesRepositoryStructure } from "./types.js";
 
 class ShoesMongooseRepository implements ShoesRepositoryStructure {

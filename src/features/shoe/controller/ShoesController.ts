@@ -1,6 +1,6 @@
 import type { NextFunction, Request, Response } from "express";
 import type { ShoesRepositoryStructure } from "../repository/types";
-import CustomError from "../../../CustomError/CustomError";
+import CustomError from "../../../CustomError/CustomError.js";
 
 class ShoesController {
   constructor(private readonly shoesRepository: ShoesRepositoryStructure) {}
