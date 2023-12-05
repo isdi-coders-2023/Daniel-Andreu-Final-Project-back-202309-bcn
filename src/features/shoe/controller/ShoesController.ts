@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import type { ShoesRepositoryStructure } from "../types";
+import type { ShoesRepositoryStructure } from "../repository/types";
 
 class ShoesController {
   constructor(private readonly shoesRepository: ShoesRepositoryStructure) {}

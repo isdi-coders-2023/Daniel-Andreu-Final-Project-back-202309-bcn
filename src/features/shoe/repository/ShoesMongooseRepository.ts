@@ -1,5 +1,6 @@
 import Shoe from "../model/Shoe.js";
-import type { ShoeStructure, ShoesRepositoryStructure } from "../types";
+import type { ShoeStructure } from "../types";
+import type { ShoesRepositoryStructure } from "./types.js";
 
 class ShoesMongooseRepository implements ShoesRepositoryStructure {
   public async getShoes(): Promise<ShoeStructure[]> {

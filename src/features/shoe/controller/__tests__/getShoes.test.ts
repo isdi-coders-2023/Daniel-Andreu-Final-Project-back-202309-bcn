@@ -1,5 +1,6 @@
 import shoesMock from "../../mocks/shoesMock";
-import type { ShoesRepositoryStructure, ShoeDataStructure } from "../../types";
+import type { ShoesRepositoryStructure } from "../../repository/types";
+import type { ShoeDataStructure } from "../../types";
 import ShoesController from "../ShoesController";
 import type { Response, Request } from "express";
 
