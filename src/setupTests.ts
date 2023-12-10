@@ -3,7 +3,7 @@ import "./server/index.js";
 import { MongoMemoryServer } from "mongodb-memory-server";
 import { connectToDatabase } from "./database/index.js";
 
-let server: MongoMemoryServer;
+export let server: MongoMemoryServer;
 
 beforeAll(async () => {
   server = await MongoMemoryServer.create();
