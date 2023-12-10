@@ -4,7 +4,7 @@ import type { ShoesRepositoryStructure } from "./types.js";
 
 class ShoesMongooseRepository implements ShoesRepositoryStructure {
   public async getShoes(): Promise<ShoeStructure[]> {
-    const shoes = await Shoe.find();
+    const shoes = await Shoe.find().sort({ _id: -1 }).limit(10);
 
     return shoes;
   }
