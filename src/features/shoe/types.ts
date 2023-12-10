@@ -1,3 +1,4 @@
+import { type Request } from "express";
 export interface ShoeDataStructure {
   title: string;
   image: string;
@@ -16,3 +17,9 @@ export interface ShoeDataStructure {
 export interface ShoeStructure extends ShoeDataStructure {
   _id: string;
 }
+
+export type ShoeCreateRequest = Request<
+  Record<string, unknown>,
+  Record<string, unknown>,
+  ShoeDataStructure
+>;
