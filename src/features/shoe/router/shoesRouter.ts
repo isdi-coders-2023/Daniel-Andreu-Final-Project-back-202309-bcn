@@ -10,5 +10,6 @@ const shoesController = new ShoesController(shoesRepository);
 shoesRouter.get("/", shoesController.getShoes);
 shoesRouter.delete("/:shoeId", shoesController.deleteShoe);
 shoesRouter.post("/", shoesController.addShoe);
+shoesRouter.get("/:shoeId", shoesController.getShoeById);
 
 export default shoesRouter;
