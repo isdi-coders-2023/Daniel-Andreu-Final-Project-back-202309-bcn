@@ -28,5 +28,15 @@ class ShoesMongooseRepository implements ShoesRepositoryStructure {
       );
     }
   }
+
+  public async getShoeById(id: string): Promise<ShoeStructure> {
+    try {
+      const shoe = await Shoe.findById(id);
+
+      return shoe!;
+    } catch (error) {
+      throw new Error("Error finding the shoe" + (error as Error).message);
+    }
+  }
 }
 export default ShoesMongooseRepository;
