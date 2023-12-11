@@ -47,6 +47,24 @@ class ShoesController {
       next(customError);
     }
   };
+
+  public getShoeById = async (
+    req: Request<{ shoeId: string }>,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    try {
+      const { shoeId } = req.params;
+
+      const shoe = await this.shoesRepository.getShoeById(shoeId)!;
+
+      res.status(200).json({ shoe });
+    } catch {
+      const customError = new CustomError("Error finding the shoe", 400);
+
+      next(customError);
+    }
+  };
 }
 
 export default ShoesController;
